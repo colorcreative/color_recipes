@@ -5,18 +5,18 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Creative Cloud Installer and creates a package.</string>
+	<string>Downloads the latest version of Miro and creates a package.</string>
 	<key>Identifier</key>
-	<string>com.github.colorcreative.pkg.CreativeCloudInstaller</string>
+	<string>com.github.colorcreative.pkg.Miro</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Creative Cloud Installer</string>
+		<string>Miro</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.colorcreative.download.CreativeCloudInstaller</string>
+	<string>com.github.colorcreative.download.Miro</string>
 	<key>Process</key>
 	<array>
 		<dict>

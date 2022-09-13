@@ -10,8 +10,6 @@
 	<string>com.github.colorcreative.install.CreativeCloudInstaller</string>
 	<key>Input</key>
 	<dict>
-		<key>APP_FILENAME</key>
-		<string>Install</string>
 		<key>NAME</key>
 		<string>Creative Cloud Installer</string>
 	</dict>
@@ -32,7 +30,7 @@
 						<key>destination_path</key>
 						<string>/Applications</string>
 						<key>source_item</key>
-						<string>Install.app</string>
+						<string>Creative Cloud Installer.app</string>
 					</dict>
 				</array>
 			</dict>
