@@ -23,7 +23,7 @@
 				<key>filename</key>
 				<string>%NAME%.dmg</string>
 				<key>url</key>
-				<string>https://www.notion.so/desktop/apple-silicon/download</string>
+				<string>https://desktop-release.notion-static.com/Notion-2.1.3-arm64.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
