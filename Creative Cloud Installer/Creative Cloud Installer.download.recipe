@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Comment</key>
+	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
+	<key>Description</key>
+	<string>Downloads the latest version of Creative Cloud Installer.</string>
+	<key>Identifier</key>
+	<string>com.github.colorcreative.download.CreativeCloudInstaller</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Creative Cloud Installer</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>1.0.0</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%.dmg</string>
+				<key>url</key>
+				<string>https://prod-rel-ffc-ccm.oobesaas.adobe.com/adobe-ffc-external/core/v1/wam/download?sapCode=KCCC&amp;productName=Creative%20Cloud&amp;os=mac&amp;guid=fe6ae0c2-166b-42db-be7a-f1e1ffff84ae&amp;contextParams=%7B%22component%22%3A%22cc-home%22%2C%22visitor_guid%22%3A%2245943554731673000781967627696297870404%22%2C%22campaign_id%22%3A%2224179%22%2C%22browser%22%3A%22firefox%22%2C%22context_guid%22%3A%225ec23f39-ee26-4bfd-a819-9846ba0121c6%22%2C%22variation_id%22%3A%2267650%22%2C%22experience_id%22%3A%22na%22%2C%22planCodeList%22%3A%22%22%2C%22updateCCD%22%3A%22true%22%2C%22secondarySapcodeList%22%3A%22%22%2C%22Product_ID_Promoted%22%3A%22KCCC%22%2C%22contextComName%22%3A%22ACom%3ACCH%22%2C%22contextSvcName%22%3A%22NO-WAM%22%2C%22contextOrigin%22%3A%22ACom%3ACCH%22%2C%22promocode%22%3A%22695P7L95%22%2C%22aam_uuid%22%3A%2245786181068614700481947388930528276682%22%2C%22gpv%22%3A%22creativecloud.adobe.com%22%2C%22creative-cloud-referrer%22%3A%22https%3A%2F%2Fcreativecloud.adobe.com%2F%22%2C%22AMCV_D6FAAFAD54CA9F560A4C98A5%2540AdobeOrg%22%3A%22-637568504%257CMCMID%257C45943554731673000781967627696297870404%257CMCIDTS%257C19272%257CMCAAMLH-1665686758%257C7%257CMCAAMB-1665686758%257Cj8Odv6LonN4r3an7LhD3WZrU1bUpAkFkkiY1ncBR96t2PTI%257CMCOPTOUT-1665089158s%257CNONE%257CvVersion%257C5.1.1%22%2C%22mid%22%3A%2245943554731673000781967627696297870404%22%2C%22aid%22%3A%22%22%2C%22AppMeasurementVersion%22%3A%222.22.4%22%2C%22kaizenTrialDuration%22%3A7%7D&amp;wamFeature=nuj-live&amp;environment=prod&amp;api_key=CCHomeWeb1</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_path</key>
+				<string>%pathname%/Creative Cloud Installer.app</string>
+				<key>requirement</key>
+				<string>anchor apple generic and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = JQ525L2MZD)</string>
+			</dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%pathname%/Creative Cloud Installer.app/Contents/Info.plist</string>
+				<key>plist_version_key</key>
+				<string>CFBundleShortVersionString</string>
+			</dict>
+			<key>Processor</key>
+			<string>Versioner</string>
+		</dict>
+	</array>
+</dict>
+</plist>
