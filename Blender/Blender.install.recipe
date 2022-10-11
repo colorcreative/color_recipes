@@ -5,32 +5,37 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Disk Inventory X.</string>
+	<string>Installs the latest version of Blender.</string>
 	<key>Identifier</key>
-	<string>com.github.colorcreative.download.DiskInventoryX</string>
+	<string>com.github.colorcreative.install.Blender</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Disk Inventory X</string>
+		<string>Blender</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.colorcreative.download.Blender</string>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>filename</key>
-				<string>%NAME%.dmg</string>
-				<key>url</key>
-				<string>https://www.derlien.com/diskinventoryx/downloads/Disk%20Inventory%20X%201.3.dmg</string>
+				<key>dmg_path</key>
+				<string>%pathname%</string>
+				<key>items_to_copy</key>
+				<array>
+					<dict>
+						<key>destination_path</key>
+						<string>/Applications</string>
+						<key>source_item</key>
+						<string>Blender.app</string>
+					</dict>
+				</array>
 			</dict>
 			<key>Processor</key>
-			<string>URLDownloader</string>
-		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>EndOfCheckPhase</string>
+			<string>InstallFromDMG</string>
 		</dict>
 	</array>
 </dict>
