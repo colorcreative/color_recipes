@@ -5,21 +5,22 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of NordVPN and imports it into Munki.</string>
+	<string>Downloads the latest version of NordLayer and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.colorcreative.munki.NordVPN</string>
+	<string>com.github.colorcreative.munki.NordLayer</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>NordVPN</string>
+		<string>NordLayer</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>blocking_applications</key>
 			<array>
-				<string>NordVPNLauncher Sideload.app</string>
-				<string>NordVPN.app</string>
+				<string>NordLayer.app</string>
+				<string>NordLayerLauncher.app</string>
+				<string>Updater.app</string>
 			</array>
 			<key>catalogs</key>
 			<array>
@@ -30,7 +31,7 @@
 			<key>developer</key>
 			<string>Nordvpn S.A.</string>
 			<key>display_name</key>
-			<string>NordVPN</string>
+			<string>NordLayer</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
@@ -40,7 +41,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.colorcreative.download.NordVPN</string>
+	<string>com.github.colorcreative.download.NordLayer</string>
 	<key>Process</key>
 	<array>
 		<dict>
