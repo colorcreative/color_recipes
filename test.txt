@@ -1,0 +1,43 @@
+1Password.munki.recipe
+AppCleaner.munki.recipe
+AutoPkgr.munki.recipe
+Blender.munki.recipe
+Colour Contrast Analyser.munki.recipe
+Creative Cloud Installer.munki.recipe
+Cyberduck.munki.recipe
+Discord.munki.recipe
+Disk Inventory X.munki.recipe
+Excel.munki.recipe
+FileZilla.munki.recipe
+Final Draft 11.munki.recipe
+Frame.io Transfer.munki.recipe
+Grammarly Desktop.munki.recipe
+LogiMgr Installer.munki.recipe
+Loupedeck.munki.recipe
+Meld.munki.recipe
+Microsoft Teams.munki.recipe
+Miro.munki.recipe
+MunkiAdmin.munki.recipe
+NDI Launcher.munki.recipe
+NordLayer.munki.recipe
+Notion.munki.recipe
+Nudge.munki.recipe
+OBS Studio.munki.recipe
+OneDrive.munki.recipe
+Outlook.munki.recipe
+PPPC Utility.munki.recipe
+Parsec.munki.recipe
+PlistEdit Pro.munki.recipe
+Postman.munki.recipe
+PowerPoint.munki.recipe
+Recipe Robot.munki.recipe
+Santa.munki.recipe
+Signiant App.munki.recipe
+Slack.munki.recipe
+Sonos.munki.recipe
+Steam.munki.recipe
+Suspicious Package.munki.recipe
+Timeular.munki.recipe
+Word.munki.recipe
+iMazing Profile Editor.munki.recipe
+zoom.us.munki.recipe
