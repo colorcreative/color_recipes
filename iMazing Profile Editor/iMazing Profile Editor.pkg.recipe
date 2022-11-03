@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of iMazing Profile Editor and creates a package.</string>
 	<key>Identifier</key>
-	<string>com.github.colorcreative.pkg.iMazingProfileEditor</string>
+	<string>com.colorcreative.pkg.iMazingProfileEditor</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -16,7 +16,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.colorcreative.download.iMazingProfileEditor</string>
+	<string>com.colorcreative.download.iMazingProfileEditor</string>
 	<key>Process</key>
 	<array>
 		<dict>
