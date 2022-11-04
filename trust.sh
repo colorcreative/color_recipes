@@ -1,7 +1,8 @@
-autopkg_repo="~/Library/Application Support/AutoPkgr/recipe_list.txt"
 
-# ls -R $autopkg_repo | grep recipe | while read line
-cat $autopkg_repo | while read line
+autopkg_repo='Users/sammank/Library/Application Support/AutoPkgr/test.txt'
+cd $autopkg_repo
+ls -R | grep recipe | while read line
+#cat $autopkg_repo | while read line
 do
     echo "Creating override for: $line"
     autopkg make-override $line
