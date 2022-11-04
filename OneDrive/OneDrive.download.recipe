@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of OneDrive.</string>
 	<key>Identifier</key>
-	<string>com.github.colorcreative.download.OneDrive</string>
+	<string>com.colorcreative.download.OneDrive</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -23,7 +23,7 @@
 				<key>filename</key>
 				<string>%NAME%.pkg</string>
 				<key>url</key>
-				<string>https://oneclient.sfx.ms/Mac/Prod/22.141.0703.0002/universal/OneDrive.pkg</string>
+				<string>https://oneclient.sfx.ms/Mac/Prod/22.207.1002.0003/universal/OneDrive.pkg?culture=en-us&amp;country=US</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>

@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Installs the latest version of OneDrive.</string>
 	<key>Identifier</key>
-	<string>com.github.colorcreative.install.OneDrive</string>
+	<string>com.colorcreative.install.OneDrive</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -16,7 +16,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.colorcreative.download.OneDrive</string>
+	<string>com.colorcreative.download.OneDrive</string>
 	<key>Process</key>
 	<array>
 		<dict>
