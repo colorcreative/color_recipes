@@ -5,7 +5,7 @@ ls -R | grep munki | while read line
 #cat $autopkg_repo | while read line
 do
     echo "Creating override for: $line"
-    autopkg make-override $line
+    autopkg make-override $line --force
     # echo "Auditing: $line"
     # autopkg audit "$line"
     # echo "Updating trust for: $line"
