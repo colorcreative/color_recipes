@@ -25,7 +25,7 @@
 				<key>filename</key>
 				<string>%NAME%.dmg</string>
 				<key>url</key>
-				<string>https://dl.google.com/chrome/mac/universal/stable/GGRO/googlechrome.dmg</string>
+				<string>https://dl.google.com/dl/chrome/mac/universal/stable/gcea/googlechrome.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
