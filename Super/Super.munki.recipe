@@ -3,73 +3,83 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Recipe to download the latest version of Super, unzip the tarball, and move the executable to /usr/local/bin/</string>
+    <string>Downloads the latest version of Super, creates a package, and imports it into Munki</string>
     <key>Identifier</key>
-    <string>com.github.autopkg.munki.Super</string>
+    <string>com.colorcreative.autopkg.munki.super</string>
     <key>Input</key>
     <dict>
-        <key>NAME</key>
-        <string>Super</string>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>apps</string>
+        <key>pkginfo</key>
+        <dict>
+            <key>catalogs</key>
+            <array>
+                <string>testing</string>
+            </array>
+            <key>category</key>
+            <string>Utilities</string>
+        </dict>
     </dict>
     <key>MinimumVersion</key>
-    <string>2.3</string>
+    <string>1.0</string>
+    <key>ParentRecipe</key>
+    <string>com.colorcreative.autopkg.download.super</string>
     <key>Process</key>
     <array>
         <dict>
-            <key>Processor</key>
-            <string>URLDownloader</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>https://api.github.com/repos/Macjutsu/super/releases/latest</string>
-                <key>filename</key>
-                <string>%NAME%.tar.gz</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>EndOfCheckPhase</string>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>Unarchiver</string>
             <key>Arguments</key>
             <dict>
                 <key>archive_path</key>
                 <string>%pathname%</string>
-                <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%</string>
-                <key>purge_destination</key>
-                <true/>
-                <key>unpacker</key>
-                <string>tar</string>
-                <key>unpacker_args</key>
-                <array>
-                    <string>-xzf</string>
-                </array>
             </dict>
+            <key>Processor</key>
+            <string>Unarchiver</string>
         </dict>
         <dict>
-            <key>Processor</key>
-            <string>../CustomRecipes/FindExecutable</string>
             <key>Arguments</key>
             <dict>
-                <key>start_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%</string>
-                <key>executable_name</key>
-                <string>super</string>
+                <key>root_path</key>
+                <string>%RECIPE_CACHE_DIR%/Super</string>
+                <key>pkg_path</key>
+                <string>%RECIPE_CACHE_DIR%/Super.pkg</string>
+                <key>id</key>
+                <string>com.colorcreative.Super</string>
+                <key>version</key>
+                <string>%version%</string>
             </dict>
+            <key>Processor</key>
+            <string>PkgRootCreator</string>
         </dict>
         <dict>
-            <key>Processor</key>
-            <string>../CustomRecipes/MoveExecutable</string>
             <key>Arguments</key>
             <dict>
-                <key>source_path</key>
-                <string>%found_executable%</string>
-                <key>destination_dir</key>
-                <string>/usr/local/bin</string>
+                <key>source</key>
+                <string>%RECIPE_CACHE_DIR%/Super/super</string>
+                <key>destination</key>
+                <string>%RECIPE_CACHE_DIR%/Super/usr/local/bin/super</string>
             </dict>
+            <key>Processor</key>
+            <string>PathDeleter</string>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>root</key>
+                <string>%RECIPE_CACHE_DIR%/Super</string>
+                <key>pkg_path</key>
+                <string>%RECIPE_CACHE_DIR%/Super.pkg</string>
+            </dict>
+            <key>Processor</key>
+            <string>PkgCreator</string>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%RECIPE_CACHE_DIR%/Super.pkg</string>
+            </dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
         </dict>
     </array>
 </dict>

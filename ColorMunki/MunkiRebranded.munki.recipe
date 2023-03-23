@@ -30,6 +30,10 @@
     <key>Process</key>
     <array>
         <dict>
+            <key>Processor</key>
+            <string>PathDeleter</string>
+        </dict>
+        <dict>
             <key>Arguments</key>
             <dict>
                 <key>executable</key>
@@ -40,9 +44,11 @@
                 <string>%pathname%</string>
                 <key>rebrand_script</key>
                 <string>%RECIPE_CACHE_DIR%/com.github.autopkg.download.munki-rebrand/munki_rebrand.py</string>
+                <key>processor_path</key>
+                <string>%RECIPE_DIR%/../CustomProcessors/RebrandedMunkiPkgCreator.py</string>
             </dict>
             <key>Processor</key>
-            <string>%RECIPE_DIR%/../CustomProcessors/RebrandedMunkiPkgCreator.py</string>
+            <string>ProcessorLoader</string>
         </dict>
         <dict>
             <key>Processor</key>
