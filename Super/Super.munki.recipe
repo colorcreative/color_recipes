@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Recipe to download the latest version of Super, unzip the tarball, and move the executable to /usr/local/bin/</string>
+    <key>Identifier</key>
+    <string>com.github.autopkg.munki.Super</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>Super</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>2.3</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://api.github.com/repos/Macjutsu/super/releases/latest</string>
+                <key>filename</key>
+                <string>%NAME%.tar.gz</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Unarchiver</string>
+            <key>Arguments</key>
+            <dict>
+                <key>archive_path</key>
+                <string>%pathname%</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%</string>
+                <key>purge_destination</key>
+                <true/>
+                <key>unpacker</key>
+                <string>tar</string>
+                <key>unpacker_args</key>
+                <array>
+                    <string>-xzf</string>
+                </array>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>../CustomRecipes/FindExecutable</string>
+            <key>Arguments</key>
+            <dict>
+                <key>start_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%</string>
+                <key>executable_name</key>
+                <string>super</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>../CustomRecipes/MoveExecutable</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_path</key>
+                <string>%found_executable%</string>
+                <key>destination_dir</key>
+                <string>/usr/local/bin</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>
