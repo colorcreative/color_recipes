@@ -42,7 +42,7 @@
                 <string>%RECIPE_CACHE_DIR%/com.github.autopkg.download.munki-rebrand/munki_rebrand.py</string>
             </dict>
             <key>Processor</key>
-            <string>../CustomProcessors/RebrandedMunkiPkgCreator</string>
+            <string>%RECIPE_DIR%/../CustomProcessors/RebrandedMunkiPkgCreator.py</string>
         </dict>
         <dict>
             <key>Processor</key>
