@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of zoom.us and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.colorcreative.munki.zoom.us</string>
+	<string>com.github.colorcreative.munki.zoom.us</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
@@ -18,16 +18,17 @@
 		<dict>
 			<key>blocking_applications</key>
 			<array>
-				<string>ZoomPhone.app</string>
-				<string>airhost.app</string>
-				<string>zoom.us.app</string>
 				<string>Transcode.app</string>
-				<string>ZMScreenshot.app</string>
-				<string>ZoomAutoUpdater.app</string>
 				<string>aomhost.app</string>
-				<string>CptHost.app</string>
+				<string>ZoomClips.app</string>
 				<string>ZoomUninstaller.app</string>
+				<string>ZMScreenshot.app</string>
+				<string>zoom.us.app</string>
+				<string>airhost.app</string>
 				<string>caphost.app</string>
+				<string>ZoomPhone.app</string>
+				<string>ZoomAutoUpdater.app</string>
+				<string>CptHost.app</string>
 			</array>
 			<key>catalogs</key>
 			<array>
@@ -48,7 +49,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.colorcreative.download.zoom.us</string>
+	<string>com.github.colorcreative.download.zoom.us</string>
 	<key>Process</key>
 	<array>
 		<dict>
