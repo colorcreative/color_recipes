@@ -19,6 +19,23 @@
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
 	<string>com.github.colorcreative.download.GrammarlyDesktop</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.colorcreative.download.GrammarlyDesktop</key>
+			<dict>
+				<key>git_hash</key>
+				<string>775d2d361c5398aa38d14fd122c0f74c8e1736ed</string>
+				<key>path</key>
+				<string>~/Documents/munki_repo/color_recipes/Grammarly Desktop/Grammarly Desktop.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>0617b45b0aa1dbcbca816ad338241acf2eb942c5293264a92f31e593ba0d7482</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
