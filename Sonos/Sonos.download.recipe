@@ -23,7 +23,7 @@
 				<key>filename</key>
 				<string>%NAME%.dmg</string>
 				<key>url</key>
-				<string>https://update-software.sonos.com/software/gjocspcx/Sonos_69.1-33120.dmg</string>
+				<string>https://www.sonos.com/redir/controller_software_mac2</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
