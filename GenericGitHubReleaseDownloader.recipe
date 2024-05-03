@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the latest release asset from a specified GitHub repository based on a regex pattern.</string>
+    
+    <key>Identifier</key>
+    <string>com.github.autopkg.download-latest-github-release</string>
+    
+    <key>Input</key>
+    <dict>
+        <key>github_repo</key>
+        <string>%github_repo%</string>
+        <key>asset_regex</key>
+        <string>%asset_regex%</string>
+    </dict>
+    
+    <key>MinimumVersion</key>
+    <string>1.0</string>
+    
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>GitHubReleasesInfoProvider</string>
+            <key>Arguments</key>
+            <dict>
+                <key>github_repo</key>
+                <string>%github_repo%</string>
+                <key>asset_regex</key>
+                <string>%asset_regex%</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
+                <key>filename</key>
+                <string>%NAME%</string>
+                <key>url</key>
+                <string>%url%</string>
+            </dict>
+        </dict>
+    </array>
+    
+    <key>Output</key>
+    <dict>
+        <key>pathname</key>
+        <string>%RECIPE_CACHE_DIR%/%NAME%</string>
+    </dict>
+</dict>
+</plist>
