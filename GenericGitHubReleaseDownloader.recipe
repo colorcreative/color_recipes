@@ -39,7 +39,7 @@
             <key>Arguments</key>
             <dict>
                 <key>filename</key>
-                <string>%NAME%.pkg</string>  <!-- Uses NAME for the file, ensuring proper naming -->
+                <string>%NAME%.pkg</string>
                 <key>url</key>
                 <string>%url%</string>
             </dict>

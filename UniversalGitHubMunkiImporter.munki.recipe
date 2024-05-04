@@ -13,6 +13,8 @@
         <string>%munki_repo_subdir%</string>
         <key>NAME</key>
         <string>%NAME%</string>
+        <key>catalog</key>
+        <string>%catalog%</string>
     </dict>
     
     <key>MinimumVersion</key>
@@ -28,10 +30,10 @@
             <string>MunkiImporter</string>
             <key>Arguments</key>
             <dict>
-                <key>munkiimport_pkgname</key>
-                <string>%NAME%.pkg</string>
-                <key>munkiimport_repository</key>
-                <string>/path/to/your/munki_repo</string>
+                <key>pkg_path</key>
+                <string>%RECIPE_CACHE_DIR%/downloads/%NAME%.pkg</string>  <!-- Corrected to match the actual download path -->
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
                 <key>pkginfo</key>
                 <dict>
                     <key>catalogs</key>
